@@ -1,0 +1,42 @@
+{% extends "day/layout.html" %}
+
+{% block body %}
+    {% if day %}
+        <h1>Yes</h1>
+    {% else %}
+        <section class="message__timer">
+            <h1>No<span class="triangle"></span></h1>
+            <p id="days"></p>
+            <p id="hours"></p>
+            <p id="mins"></p>
+            <p id="secs"></p>
+            <h2 id="end"></h2>
+        </section>
+        <section class="wrapper">
+            <div class="cover">
+                <!-- {% load static %}
+                <img src="{% static 'img/me.jpg' %}" alt="My picture" width="100px"> -->
+            </div>
+            <div class="social__media">
+                <div class="field__label">
+                    <a href="https://www.linkedin.com/in/aayush-nepal-2b15091a4/" target="_blank">
+                        <img class="social" src="{% static 'img/linkedin-bounce.gif' %}" alt="linkedin-bounce">
+                    </a>
+                </div>
+                <div class="field__label">
+                    <a href="https://t.me/DivlystoNepal11" target="_blank">
+                        <img class="social" src="{% static 'img/telegram-app-click.gif' %}" alt="telegram-app-click">
+                    </a>
+                </div>
+                <div class="field__label">
+                    <a href="https://t.me/DivlystoNepal11" target="_blank">
+                        <img class="social" src="{% static 'img/twitter-circled-scale.gif' %}" alt="twitter-circled-scale">
+                    </a>
+                </div>
+            </div>
+        </section>
+    {% endif %}
+    {% load static %}
+        <script src="{% static 'js/index.js'%}"></script>
+{% endblock %}
+

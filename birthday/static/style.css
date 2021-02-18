@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@1,200&display=swap');
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+h1 {
+    display: flex;
+    position: relative;
+    font-size: 100px;
+    text-align: center;
+    font-family: monospace;
+    left: -40px;
+}
+.triangle {
+    position: relative;
+    width: 0;
+    height: 0;
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+    border-bottom: 100px solid black;
+    transform: rotate(90deg);
+    left: 20px;
+    animation: blink 10s ease-in;
+    top: 20px;
+}
+@keyframes blink {
+    from, 0% {
+        border-bottom-color: #096970;
+    }
+    to, 100% {
+        border-bottom-color: #fc3200;
+    }
+}
+.message__timer {
+    position: relative;
+    display: flex;
+    left: 30%;
+    width: fit-content;
+    padding: 10px;
+}
+.message__timer p {
+    position: relative;
+    padding: 40px;
+    font-size: 40px;
+    background-image: linear-gradient(to right, #4433cb, #cc556b);
+    color: #fff;
+    font-family: 'Roboto Mono', monospace;
+    animation: change linear 10000000000s infinite;
+}
+@keyframes change{
+    from, 0% {
+        background-image: linear-gradient(to left, #fff, #eee);
+        color: #000;
+        font-size: 45px;
+    }
+    to, 10% {
+        background-image: linear-gradient(to right, rgb(0, 0, 0), rgb(85, 10, 95));
+        color: #fc04a9;
+        font-size: 50px;
+    }
+
+}
+
+.wrapper {
+    position: relative;
+    padding: 20px;
+}
+.cover {
+    position: relative;
+    background-image: conic-gradient(
+        from 45deg,
+        #04cafc 0% 25%,
+        #c900fc 0% 50%,
+        #bb3a56 0% 75%,
+        #d45d55 0%
+    ) ,url('/static/img/me.jpg');
+    background-attachment: scroll;
+    height: 50vh;
+    width: 60vw;
+    background-position: center;
+    background-size: cover;
+    left: 25%;
+    background-blend-mode: color-burn;
+}
+.social__media {
+    position: relative;
+    left: 30%;
+    width: fit-content;
+    display: flex;
+}
+.field__label {
+    position: relative;
+    left: 20%;
+    padding: 10px;
+}
+.social {
+    height: 15vh;
+    padding: 30px;
+}
+
+/* @media only screen 
+    and (min-device-width: 320px)
+    and (max-device-width: 480px) {
+        .message__timer h1 {
+            left: 25px;
+            display: block;
+        }
+        .triangle {
+            left: 0;
+            top: -30px;
+            transform: rotate(-180deg);
+        }
+    } */
