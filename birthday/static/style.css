@@ -9,9 +9,11 @@ h1 {
     display: flex;
     position: relative;
     font-size: 100px;
-    text-align: center;
+    align-items: center;
     font-family: monospace;
-    left: -40px;
+    width: 70%;
+    left: 30%;
+
 }
 .triangle {
     position: relative;
@@ -20,7 +22,7 @@ h1 {
     border-left: 50px solid transparent;
     border-right: 50px solid transparent;
     border-bottom: 100px solid black;
-    transform: rotate(90deg);
+    transform: rotate(180deg);
     left: 20px;
     animation: blink 10s ease-in;
     top: 20px;
@@ -65,7 +67,7 @@ h1 {
 
 .wrapper {
     position: relative;
-    padding: 20px;
+    padding: 7px;
 }
 .cover {
     position: relative;
@@ -81,7 +83,7 @@ h1 {
     width: 60vw;
     background-position: center;
     background-size: cover;
-    left: 25%;
+    left: 20%;
     background-blend-mode: color-burn;
 }
 .social__media {
@@ -100,16 +102,51 @@ h1 {
     padding: 30px;
 }
 
-/* @media only screen 
+ @media only screen 
     and (min-device-width: 320px)
     and (max-device-width: 480px) {
-        .message__timer h1 {
-            left: 25px;
+        .message__timer  {
             display: block;
+            padding: 10px;
+            top: 90px;
+            width: fit-content;
+            left: 20%;
         }
-        .triangle {
-            left: 0;
-            top: -30px;
+        
+         h1  {
+            display: flex;
+            left: 40px;
+        }
+        h1::after{
+            position: absolute;
+            content: "(Comming Soon)";
+            font-size: 15px;
+            font: small-caps;
+            left: 45%;
+            top: 45%;
+        }
+        .triangle{
             transform: rotate(-180deg);
+            top: 100px;
+            left: -3%;
         }
-    } */
+        .wrapper {
+            width: fit-content;
+        }
+        .cover{
+            top: 70px;
+            width: 100%;
+            left: -2%;
+        }
+        .social__media {
+            left: -23%;
+            top: 30px;
+            padding: 5px;
+            width: fit-content;
+        }
+      .message__timer p{
+          padding: 20px;
+          border: 1px solid black;
+          left: 45px;
+      }  
+    }
